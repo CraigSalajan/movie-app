@@ -13,12 +13,12 @@ resources:
 
 variables:
   appName: 'craig-salajan'
-  azureSubscription: 'TT Prime Subscription'
+  azureSubscription: 'TT Prime'
   azureStorage: 'teragonassetstorage'
   azureStorageContainer: 'craig-salajan'
   assetSourcePath: '$(Build.SourcesDirectory)/dist/ui/browser'
   webAppName: 'craig-salajan'
-  dockerRegistryServiceConnection: '7eef203e-46d6-4ed2-86f1-adfc3182ef8c'
+  dockerRegistryServiceConnection: '6499f2c0-1860-4f5f-ade6-3bd6769f907b'
   imageRepository: 'craig-salajan'
   containerRegistry: 'teragontechnologies.azurecr.io'
   dockerfilePath: '.'
