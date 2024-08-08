@@ -1,0 +1,9 @@
+<section>
+  <app-button (click)="onClick(currentPage() - 1)">Prev</app-button>
+  <app-page-number [number]="currentPage() - 2" (onClick)="onClick($event)"></app-page-number>
+  <app-page-number [number]="currentPage() - 1" (onClick)="onClick($event)"></app-page-number>
+  <app-page-number [number]="currentPage()" (onClick)="onClick($event)"></app-page-number>
+  <app-page-number [number]="currentPage() + 1" (onClick)="onClick($event)"></app-page-number>
+  <app-page-number [number]="currentPage() + 2" (onClick)="onClick($event)"></app-page-number>
+  <app-button (click)="onClick(currentPage() + 1)">Next</app-button>
+</section>
