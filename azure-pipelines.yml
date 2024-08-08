@@ -13,7 +13,7 @@ resources:
 
 variables:
   appName: 'craig-salajan'
-  azureSubscription: 'TT Prime'
+  azureSubscription: 'TT Prime(5779ca5c-825c-4a92-8a08-4d5676575a47)'
   azureStorage: 'teragonassetstorage'
   azureStorageContainer: 'craig-salajan'
   assetSourcePath: '$(Build.SourcesDirectory)/dist/ui/browser'
