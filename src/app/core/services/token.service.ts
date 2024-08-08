@@ -1,6 +1,6 @@
-import {Injectable, signal, WritableSignal} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {tap} from "rxjs";
+import { Injectable, signal, WritableSignal } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
+import { tap } from "rxjs";
 
 export interface TokenResponse {
   token: string;

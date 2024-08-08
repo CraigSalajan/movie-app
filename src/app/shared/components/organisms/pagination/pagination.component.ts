@@ -1,6 +1,6 @@
-import {Component, input, InputSignal, output, OutputEmitterRef} from '@angular/core';
-import {PageNumberComponent} from "../../molecules/page-number/page-number.component";
-import {ButtonComponent} from "../../atoms/button/button.component";
+import { Component, input, InputSignal, output, OutputEmitterRef } from '@angular/core';
+import { PageNumberComponent } from "../../molecules/page-number/page-number.component";
+import { ButtonComponent } from "../../atoms/button/button.component";
 
 @Component({
   selector: 'app-pagination',

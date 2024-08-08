@@ -1,7 +1,7 @@
-import {Injectable, signal, WritableSignal} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {firstValueFrom} from "rxjs";
-import {PaginatedResponse} from "../models/response.model";
+import { Injectable, signal, WritableSignal } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { firstValueFrom } from 'rxjs';
+import { PaginatedResponse } from '../models/response.model';
 
 export interface Movie {
   id: string;

@@ -1,6 +1,6 @@
-import {Component, input, InputSignal} from '@angular/core';
-import {Movie, MovieService} from "../../../../core/services/movie.service";
-import {CardComponent} from "../../atoms/card/card.component";
+import { Component, input, InputSignal } from '@angular/core';
+import { Movie } from "../../../../core/services/movie.service";
+import { CardComponent } from "../../atoms/card/card.component";
 
 @Component({
   selector: 'app-movie-card',

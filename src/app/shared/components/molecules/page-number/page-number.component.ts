@@ -1,6 +1,6 @@
-import {Component, inject, input, InputSignal, output, OutputEmitterRef} from '@angular/core';
-import {ButtonComponent} from "../../atoms/button/button.component";
-import {MovieService} from "../../../../core/services/movie.service";
+import { Component, inject, input, InputSignal, output, OutputEmitterRef } from '@angular/core';
+import { ButtonComponent } from "../../atoms/button/button.component";
+import { MovieService } from "../../../../core/services/movie.service";
 
 @Component({
   selector: 'app-page-number',
