@@ -52,7 +52,7 @@ stages:
               appType: 'webAppLinux'
               WebAppName: 'craig-salajan'
               deployToSlotOrASE: true
-              ResourceGroupName: 'teragon-technologies_group'
+              ResourceGroupName: 'teragon-clients'
               SlotName: 'production'
               packageForLinux: '$(Pipeline.Workspace)/core/$(Build.BuildId).zip'
 
