@@ -1,7 +1,7 @@
 <app-card
   [title]="movie().title"
-  [background]="movie().posterUrl"
+  [background]="movie().posterUrl ?? 'https://placehold.co/250x375'"
   [description]="movie().summary"
-  [subHeadingLeft]="movie().duration"
+  [subHeadingLeft]="movie().duration | duration"
   [subHeadingRight]="movie().rating"
 ></app-card>

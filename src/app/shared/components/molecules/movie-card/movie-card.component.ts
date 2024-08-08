@@ -1,4 +1,5 @@
 import { Component, input, InputSignal } from '@angular/core';
+import { DurationPipe } from '../../../../core/pipes/duration.pipe';
 import { Movie } from "../../../../core/services/movie.service";
 import { CardComponent } from "../../atoms/card/card.component";
 
@@ -6,7 +7,8 @@ import { CardComponent } from "../../atoms/card/card.component";
   selector: 'app-movie-card',
   standalone: true,
   imports: [
-    CardComponent
+    CardComponent,
+    DurationPipe
   ],
   templateUrl: './movie-card.component.html',
   styleUrl: './movie-card.component.css'
