@@ -1,5 +1,5 @@
-<form [formGroup]="filters" (ngSubmit)="onSubmit()">
-  <input formControlName="searchTerm" type="text" />
+<form class="filters" [formGroup]="filters" (ngSubmit)="onSubmit()">
+  <app-input [control]="filters.controls.searchTerm" type="text" placeholder="Search..." />
 
   <select formControlName="genre">
     @for(genre of genreService.genres(); track genre.title) {
@@ -8,5 +8,5 @@
     <option value="">All Genres</option>
   </select>
 
-  <app-button>Search</app-button>
+  <app-button color="orange">Search</app-button>
 </form>

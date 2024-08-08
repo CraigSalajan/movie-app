@@ -3,13 +3,15 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { GenreService } from '../../../../core/services/genre.service';
 import { MovieService } from '../../../../core/services/movie.service';
 import { ButtonComponent } from '../../atoms/button/button.component';
+import { InputComponent } from '../../atoms/input/input.component';
 
 @Component({
   selector: 'app-filters',
   standalone: true,
   imports: [
     ReactiveFormsModule,
-    ButtonComponent
+    ButtonComponent,
+    InputComponent
   ],
   templateUrl: './filters.component.html',
   styleUrl: './filters.component.css'

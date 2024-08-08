@@ -1,5 +1,10 @@
-<section class="card" [style.background-image]="background() ? 'url('+background()+')' : ''">
-  <section class="details">
+<section class="card">
+  <section class="card-front">
+    @if (background()) {
+    <img [ngSrc]="background()" [alt]="title()" width="200" height="300" />
+    }
+  </section>
+  <section class="card-back">
     <header>
       <h2>{{title()}}</h2>
     </header>

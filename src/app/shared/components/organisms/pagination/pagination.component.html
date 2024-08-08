@@ -1,12 +1,12 @@
-<section>
-  <app-button (click)="onClick(movieService.pagination().page - 1)">Prev</app-button>
+<section class="pagination">
+  <app-button color="orange" (click)="onClick(movieService.pagination().page - 1)">Prev</app-button>
   <app-page-number [number]="movieService.pagination().page - 2" (onClick)="onClick($event)"></app-page-number>
   <app-page-number [number]="movieService.pagination().page - 1" (onClick)="onClick($event)"></app-page-number>
   <app-page-number [active]="true" [number]="movieService.pagination().page" (onClick)="onClick($event)"></app-page-number>
   <app-page-number [number]="movieService.pagination().page + 1" (onClick)="onClick($event)"></app-page-number>
   <app-page-number [number]="movieService.pagination().page + 2" (onClick)="onClick($event)"></app-page-number>
-  <app-button (click)="onClick(movieService.pagination().page + 1)">Next</app-button>
+  <app-button color="orange" (click)="onClick(movieService.pagination().page + 1)">Next</app-button>
 </section>
-<section>
+<section class="details">
   <p>Showing Page {{movieService.pagination().page}} of {{movieService.pagination().totalPages}} </p>
 </section>

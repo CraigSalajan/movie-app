@@ -1,1 +1,2 @@
-<input />
+<label [for]="inputId()">{{label()}}</label>
+<input [id]="inputId()" [type]="type()" [formControl]="control()" [placeholder]="placeholder() || label()" />

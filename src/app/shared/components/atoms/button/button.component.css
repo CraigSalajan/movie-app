@@ -1,0 +1,41 @@
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--foreground);
+  font-family: var(--font-family-base);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+button.orange {
+  background-color: var(--orange);
+}
+
+button.blue {
+  background-color: var(--blue);
+}
+
+button.sm {
+  font-size: 14px;
+  padding: 8px 18px;
+}
+
+button.md {
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+button.lg {
+  font-size: 18px;
+  padding: 12px 24px;
+}
+
