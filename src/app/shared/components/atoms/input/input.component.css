@@ -1,26 +1,28 @@
+.input-container {
+  position: relative;
+  width: 300px;
+}
+
 input {
   flex: 1;
   padding: 10px;
   border: none;
   /*border-radius: 8px;*/
   outline: none;
+  width: 100%;
 }
 
-.input-underline {
-  height: 2px;
-  background: var(--orange);
+.clear-btn {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  transition: width 0.3s;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #999;
+  display: none;
 }
 
-.input-underline.error {
-  width: 100%;
-  background: darkred;
-}
-
-input:focus + .input-underline {
-  width: 100%;
+input:not(:placeholder-shown) + .clear-btn {
+  display: block; /* Show the clear button when input has text */
 }

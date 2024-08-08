@@ -2,6 +2,7 @@
 
 <app-filters></app-filters>
 
+<app-pagination></app-pagination>
 <section class="movies">
 @for (movie of movieService.movies(); track movie.id) {
   <app-movie-card [movie]="movie"></app-movie-card>

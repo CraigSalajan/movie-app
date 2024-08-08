@@ -16,4 +16,9 @@ export class InputComponent {
   type = input<string>("text");
   control = input<FormControl<any>>(new FormControl<any>(""));
   placeholder = input<string>("");
+
+
+  clearText() {
+    this.control().patchValue("");
+  }
 }

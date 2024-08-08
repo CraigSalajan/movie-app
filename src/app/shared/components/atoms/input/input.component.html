@@ -1,2 +1,5 @@
-<label [for]="inputId()">{{label()}}</label>
-<input [id]="inputId()" [type]="type()" [formControl]="control()" [placeholder]="placeholder() || label()" />
+<section class="input-container">
+  <label [for]="inputId()">{{label()}}</label>
+  <input [id]="inputId()" [type]="type()" [formControl]="control()" [placeholder]="placeholder() || label()" />
+  <span (click)="clearText()" class="clear-btn" id="clearBtn">&times;</span>
+</section>
