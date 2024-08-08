@@ -1,4 +1,4 @@
-import { Injectable, signal, WritableSignal } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { Apollo, gql } from 'apollo-angular';
 import { firstValueFrom } from 'rxjs';
 import { GQLResponse } from '../models/response.model';
@@ -22,7 +22,7 @@ query Genres {
 })
 export class GenreService {
 
-  genres: WritableSignal<Genre[]> = signal([]);
+  genres = signal<Genre[]>([]);
 
   constructor(private apollo: Apollo) {}
 

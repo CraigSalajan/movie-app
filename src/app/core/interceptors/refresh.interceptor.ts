@@ -1,7 +1,7 @@
+import { inject } from '@angular/core';
 import { HttpErrorResponse, HttpEvent, HttpInterceptorFn } from '@angular/common/http';
-import { catchError, Observable, of, switchMap, throwError } from "rxjs";
-import { TokenResponse, TokenService } from "../services/token.service";
-import { inject } from "@angular/core";
+import { catchError, Observable, of, switchMap, throwError } from 'rxjs';
+import { TokenResponse, TokenService } from '../services/token.service';
 
 export const refreshInterceptor: HttpInterceptorFn = (req, next): Observable<HttpEvent<any>> => {
 

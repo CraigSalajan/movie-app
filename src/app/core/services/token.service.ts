@@ -1,4 +1,4 @@
-import { Injectable, signal, WritableSignal } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { tap } from "rxjs";
 
@@ -11,7 +11,7 @@ export interface TokenResponse {
 })
 export class TokenService {
 
-  token: WritableSignal<string | null> = signal(null);
+  token = signal<string | null>(null);
 
   constructor(private http: HttpClient) { }
 

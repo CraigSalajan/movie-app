@@ -1,4 +1,4 @@
-import { Injectable, signal, WritableSignal } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Apollo, gql } from 'apollo-angular';
 import { firstValueFrom } from 'rxjs';
@@ -39,11 +39,11 @@ query GetMovies($pagination: PaginationInput, $where: MovieFilterInput) {
 })
 export class MovieService {
 
-  movies: WritableSignal<Movie[]> = signal([]);
-  pagination: WritableSignal<Pagination> = signal({} as Pagination);
+  movies = signal<Movie[]>([]);
+  pagination = signal<Pagination>({} as Pagination);
 
-  private searchTerm: WritableSignal<string|null|undefined> = signal("");
-  private genre: WritableSignal<string|null|undefined> = signal("");
+  private searchTerm= signal<string|null|undefined>("");
+  private genre = signal<string|null|undefined>("");
 
   constructor(private http: HttpClient, private apollo: Apollo) { }
 

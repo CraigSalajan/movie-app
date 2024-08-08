@@ -1,4 +1,4 @@
-import { Component, input, InputSignal } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { DurationPipe } from '../../../../core/pipes/duration.pipe';
 import { Movie } from "../../../../core/services/movie.service";
 import { CardComponent } from "../../atoms/card/card.component";
@@ -14,5 +14,5 @@ import { CardComponent } from "../../atoms/card/card.component";
   styleUrl: './movie-card.component.css'
 })
 export class MovieCardComponent {
-  movie: InputSignal<Movie> = input({} as Movie);
+  movie = input<Movie>({} as Movie);
 }

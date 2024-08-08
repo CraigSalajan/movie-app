@@ -1,4 +1,4 @@
-import { Component, inject, input, InputSignal, output, OutputEmitterRef } from '@angular/core';
+import { Component, inject, input, output } from '@angular/core';
 import { ButtonComponent } from "../../atoms/button/button.component";
 import { MovieService } from "../../../../core/services/movie.service";
 
@@ -13,10 +13,10 @@ import { MovieService } from "../../../../core/services/movie.service";
 })
 export class PageNumberComponent {
 
-  active: InputSignal<boolean> = input(false);
-  number: InputSignal<number> = input(0);
+  active = input<boolean>(false);
+  number = input<number>(0);
 
-  onClick: OutputEmitterRef<number> = output();
+  onClick = output<number>();
 
   movieService: MovieService = inject(MovieService);
 
