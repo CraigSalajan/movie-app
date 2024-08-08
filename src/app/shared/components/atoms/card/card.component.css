@@ -1,4 +1,5 @@
 :host {
+  display: block;
   perspective: 1000px;
 }
 
@@ -22,7 +23,7 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
-.card:hover {
+:host:hover .card {
  transform: rotateY(180deg);
 }
 
