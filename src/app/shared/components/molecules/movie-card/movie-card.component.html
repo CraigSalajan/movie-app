@@ -1,3 +1,5 @@
 <app-card
-  [title]="movie()?.title ?? ''"
+  [title]="movie().title"
+  [background]="movie().posterUrl"
+  [description]="movie().summary"
 ></app-card>

@@ -12,5 +12,5 @@ import { CardComponent } from "../../atoms/card/card.component";
   styleUrl: './movie-card.component.css'
 })
 export class MovieCardComponent {
-  movie: InputSignal<Movie | undefined> = input();
+  movie: InputSignal<Movie> = input({} as Movie);
 }

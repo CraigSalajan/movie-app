@@ -1,4 +1,5 @@
-import { Component, input, InputSignal, output, OutputEmitterRef } from '@angular/core';
+import { Component, inject, input, InputSignal, output, OutputEmitterRef } from '@angular/core';
+import { MovieService } from '../../../../core/services/movie.service';
 import { PageNumberComponent } from "../../molecules/page-number/page-number.component";
 import { ButtonComponent } from "../../atoms/button/button.component";
 
@@ -13,16 +14,12 @@ import { ButtonComponent } from "../../atoms/button/button.component";
   styleUrl: './pagination.component.css'
 })
 export class PaginationComponent {
-
-  totalPages: InputSignal<number> = input(0);
-  currentPage: InputSignal<number> = input(0);
-
-  pageSize: InputSignal<number> = input(0);
-
   onPageChange: OutputEmitterRef<number> = output();
 
+  movieService: MovieService = inject(MovieService);
+
   onClick(page: number) {
-    this.onPageChange.emit(page);
+    this.movieService.gotoPage(page);
   }
 
 }

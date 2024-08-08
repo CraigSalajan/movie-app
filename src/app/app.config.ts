@@ -7,6 +7,7 @@ import { provideHttpClient, withFetch, withInterceptors } from "@angular/common/
 import { apiInterceptor } from "./core/interceptors/api.interceptor";
 import { refreshInterceptor } from "./core/interceptors/refresh.interceptor";
 import { tokenInterceptor } from "./core/interceptors/token.interceptor";
+import { graphqlProvider } from './graphql.provider';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -19,5 +20,5 @@ export const appConfig: ApplicationConfig = {
       ])
     ),
     provideRouter(routes),
-    provideClientHydration()]
+    provideClientHydration(), provideHttpClient(), graphqlProvider]
 };

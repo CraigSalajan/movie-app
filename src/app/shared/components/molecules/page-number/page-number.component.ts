@@ -13,6 +13,7 @@ import { MovieService } from "../../../../core/services/movie.service";
 })
 export class PageNumberComponent {
 
+  active: InputSignal<boolean> = input(false);
   number: InputSignal<number> = input(0);
 
   onClick: OutputEmitterRef<number> = output();

@@ -1,13 +1,10 @@
 <h1>Movies</h1>
 
+<app-filters></app-filters>
+
 <section class="movies">
-@for (movie of movieService.movies()?.data; track movie.id) {
+@for (movie of movieService.movies(); track movie.id) {
   <app-movie-card [movie]="movie"></app-movie-card>
 }
 </section>
-<app-pagination
-  [currentPage]="currentPage()"
-  [totalPages]="movieService.movies().totalPages ?? 0"
-  [pageSize]="pageSize()"
-  (onPageChange)="onPaginationChange($event)"
-></app-pagination>
+<app-pagination></app-pagination>

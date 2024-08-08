@@ -1,4 +1,4 @@
-@if (number() > 0 && number() <= movieService.movies().totalPages) {
+@if (number() > 0 && number() <= movieService.pagination().totalPages) {
   <app-button (click)="handleClick()">{{number()}}</app-button>
 }
 
