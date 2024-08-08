@@ -7,3 +7,6 @@
   <app-page-number [number]="currentPage() + 2" (onClick)="onClick($event)"></app-page-number>
   <app-button (click)="onClick(currentPage() + 1)">Next</app-button>
 </section>
+<section>
+  <p>Showing {{currentPage() * pageSize()}} </p>
+</section>

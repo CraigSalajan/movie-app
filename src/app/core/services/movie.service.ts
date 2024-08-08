@@ -17,8 +17,12 @@ export class MovieService {
 
   constructor(private http: HttpClient) { }
 
-  async refreshMovies(page: number = 1, limit: number = 25) {
-    const response = await firstValueFrom(this.http.get<PaginatedResponse<Movie>>(`/movies/titles?page=${page}&limit=${limit}`));
+  async refreshMovies(page: number = 1, limit: number = 25, searchTerm: string) {
+    let queryParams = `page=${page}&limit=${limit}`;
+    if (searchTerm) {
+      queryParams += `&search=${searchTerm}`
+    }
+    const response = await firstValueFrom(this.http.get<PaginatedResponse<Movie>>(`/movies/titles?${queryParams}`));
     this.movies.set(response);
     return response;
   }

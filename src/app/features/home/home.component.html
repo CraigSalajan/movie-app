@@ -8,5 +8,6 @@
 <app-pagination
   [currentPage]="currentPage()"
   [totalPages]="movieService.movies().totalPages ?? 0"
+  [pageSize]="pageSize()"
   (onPageChange)="onPaginationChange($event)"
 ></app-pagination>

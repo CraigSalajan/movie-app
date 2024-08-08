@@ -17,6 +17,8 @@ export class PaginationComponent {
   totalPages: InputSignal<number> = input(0);
   currentPage: InputSignal<number> = input(0);
 
+  pageSize: InputSignal<number> = input(0);
+
   onPageChange: OutputEmitterRef<number> = output();
 
   onClick(page: number) {
