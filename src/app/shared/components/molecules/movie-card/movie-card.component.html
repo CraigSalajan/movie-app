@@ -1,6 +1,6 @@
 <app-card
   [title]="movie().title"
-  [background]="movie().posterUrl ?? 'https://placehold.co/250x375'"
+  [background]="movie().posterUrl || 'https://placehold.co/250x375'"
   [description]="movie().summary"
   [subHeadingLeft]="movie().duration | duration"
   [subHeadingRight]="movie().rating"

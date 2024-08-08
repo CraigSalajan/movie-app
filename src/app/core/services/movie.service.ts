@@ -2,7 +2,7 @@ import { Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Apollo, gql } from 'apollo-angular';
 import { firstValueFrom } from 'rxjs';
-import { GQLResponse, PaginatedRestResponse, Pagination } from '../models/response.model';
+import { GQLResponse, Pagination } from '../models/response.model';
 
 export interface Movie {
   id: string;
@@ -12,7 +12,6 @@ export interface Movie {
   duration: string;
   rating: string;
 }
-
 
 const GET_MOVIES = gql`
 query GetMovies($pagination: PaginationInput, $where: MovieFilterInput) {
@@ -50,25 +49,8 @@ export class MovieService {
   async refreshMovies( searchTerm: string|null|undefined, genre: string|null|undefined, page: number = 1, limit: number = 25) {
     this.searchTerm.set(searchTerm);
     this.genre.set(genre);
-    return this.getMoviesGQL(searchTerm, genre, page, limit);
-  }
 
-  private async getMoviesRest(searchTerm: string|null|undefined, genre: string|null|undefined, page: number = 1, limit: number = 25) {
-    let queryParams = `page=${page}&limit=${limit}`;
-    if (searchTerm) {
-      queryParams += `&search=${searchTerm}`
-    }
-    if (genre) {
-      queryParams += `&genre=${genre}`
-    }
-    const response = await firstValueFrom(this.http.get<PaginatedRestResponse<Movie>>(`/movies?${queryParams}`));
-    this.movies.set(response.data);
-    this.pagination.set({
-      page,
-      perPage: limit,
-      totalPages: response.totalPages,
-    })
-    return response.data;
+    return this.getMoviesGQL(searchTerm, genre, page, limit);
   }
 
   private async getMoviesGQL(searchTerm: string|null|undefined, genre: string|null|undefined, page: number = 1, limit: number = 25) {
@@ -101,13 +83,5 @@ export class MovieService {
         this.pagination().perPage
       )
     }
-  }
-
-  nextPage() {
-    this.gotoPage(this.pagination().page + 1);
-  }
-
-  previousPage() {
-    this.gotoPage(this.pagination().page - 1);
   }
 }
