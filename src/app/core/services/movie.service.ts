@@ -22,7 +22,7 @@ export class MovieService {
     if (searchTerm) {
       queryParams += `&search=${searchTerm}`
     }
-    const response = await firstValueFrom(this.http.get<PaginatedResponse<Movie>>(`/movies/titles?${queryParams}`));
+    const response = await firstValueFrom(this.http.get<PaginatedResponse<Movie>>(`/movies?${queryParams}`));
     this.movies.set(response);
     return response;
   }
