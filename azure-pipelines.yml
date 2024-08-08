@@ -5,46 +5,6 @@
 trigger:
   - main
 
-resources:
-  repositories:
-    - repository: templates
-      type: git
-      name: 'Internal Projects/Teragon-Pipelines'
-
-variables:
-  appName: 'craig-salajan'
-  azureSubscription: 'TT Prime(5779ca5c-825c-4a92-8a08-4d5676575a47)'
-  azureStorage: 'teragonassetstorage'
-  azureStorageContainer: 'craig-salajan'
-  assetSourcePath: '$(Build.SourcesDirectory)/dist/ui/browser'
-  webAppName: 'craig-salajan'
-  dockerRegistryServiceConnection: '6499f2c0-1860-4f5f-ade6-3bd6769f907b'
-  imageRepository: 'craig-salajan'
-  containerRegistry: 'teragontechnologies.azurecr.io'
-  dockerfilePath: '.'
-  tag: '$(Build.BuildId)'
-  appType: 'webAppContainer'
-  isMain: $[eq(variables['Build.SourceBranch'], 'refs/heads/main')]
-
-extends:
-  template: angular-universal-build-deploy.yml@templates
-  parameters:
-    appName: $(appName)
-    azureStorage: $(azureStorage)
-    azureStorageContainer: $(azureStorageContainer)
-    assetSourcePath: $(assetSourcePath)
-    dockerfilePath: $(dockerfilePath)
-    dockerRegistryServiceConnection: $(dockerRegistryServiceConnection)
-    containerRegistry: $(containerRegistry)
-    imageRepository: $(imageRepository)
-    tag: $(tag)
-    webAppName: $(webAppName)
-    appType: $(appType)
-    azureSubscription: $(azureSubscription)
-    isMain: $(isMain)
-trigger:
-  - main
-
 pool:
   vmImage: ubuntu-latest
 
