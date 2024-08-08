@@ -11,7 +11,9 @@ import { Component, input, InputSignal } from '@angular/core';
   styleUrl: './card.component.css'
 })
 export class CardComponent {
-  background: InputSignal<string> = input("");
-  title: InputSignal<string> = input("");
-  description: InputSignal<string> = input("");
+  background = input<string>("");
+  title= input<string>("");
+  description = input<string>("");
+  subHeadingLeft = input<string>("");
+  subHeadingRight = input<string>("");
 }

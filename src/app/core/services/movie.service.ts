@@ -9,6 +9,8 @@ export interface Movie {
   title: string;
   summary: string;
   posterUrl: string;
+  duration: string;
+  rating: string;
 }
 
 
@@ -19,7 +21,9 @@ query GetMovies($pagination: PaginationInput, $where: MovieFilterInput) {
       id,
       title,
       posterUrl,
-      summary
+      summary,
+      duration,
+      rating
     },
     pagination {
       page,

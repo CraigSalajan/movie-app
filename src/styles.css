@@ -89,4 +89,5 @@ html, body {
 
 body {
   flex: 1;
+  padding: 10px 0 15px;
 }

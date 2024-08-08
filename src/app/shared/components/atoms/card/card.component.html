@@ -1,12 +1,16 @@
 <section class="card">
   <section class="card-front">
     @if (background()) {
-    <img [ngSrc]="background()" [alt]="title()" width="200" height="300" />
+    <img [ngSrc]="background()" [alt]="title()" width="250" height="375" />
     }
   </section>
   <section class="card-back">
     <header>
       <h2>{{title()}}</h2>
+      <section class="sub-header">
+        <p>{{subHeadingLeft()}}</p>
+        <p>{{subHeadingRight()}}</p>
+      </section>
     </header>
     <article>
       <p>{{description()}}</p>
